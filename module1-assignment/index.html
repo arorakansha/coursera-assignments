@@ -11,18 +11,14 @@
     <h1>Module 1 assignment</h1>
     <div>
       Enter the food items you like to eat for lunch:
-      <input type="text" ng-model="lunchItems"   ng-class="{'error':!isValid,
-             'success': isValid}"{{ isValid }}>
-             <br>
-             Note : Counting an empty item as well (item1, item2,,item3 counts to 4)
+      <input type="text" ng-model="lunchItems" class={{ myClass }}>
     </div>
     </div>
     <div>Check If Too Much :
       <input type="button" value="Submit" ng-click="displayItems();">
       </button>
       <br>
-      <span ng-class="{'text-error':!isValid,
-             'text-success': isValid}"{{ isValid }}>
+      <span class={{ myClass }}>
         {{totalItems}}
       </span>
 

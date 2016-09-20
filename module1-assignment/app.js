@@ -9,7 +9,7 @@
     function LunchCheckController($scope) {
       $scope.lunchItems = "";
        $scope.totalItems = "";
-       $scope.isValid="";
+       $scope.myClass="";
       $scope.displayItems = function () {
         var totalValue = calculateItems($scope.lunchItems);
           $scope.totalItems = totalValue;
@@ -17,18 +17,24 @@
       }
 
       function calculateItems(content) {
-          var totalContentValue = "", output = "";
+          var totalContentValue = "", output = "", count=0;
+          totalContentValue = content.split(",");
 
-          if(content == ""){
-            $scope.isValid = false;
+          for(var i=0;i<totalContentValue.length;i++){
+            if(totalContentValue[i]==""){}
+            else{
+              count=count+1;
+            }
+          }
+
+          if(count==0){
             output = "Please enter data first!!";
+              $scope.myClass="error";
           }else {
-            totalContentValue = content.split(",");
-            $scope.isValid=true;
-            if(totalContentValue.length > 3){
+            $scope.myClass="success";
+            if(count > 3){
               output = "Too Much!";
-
-            }else if (totalContentValue.length <=3){
+            }else if (count <=3){
               output = "Enjoy!!";
             }
         }
