@@ -1,0 +1,19 @@
+.error {
+  border-color: red;
+}
+
+.success {
+  border-color: green;
+}
+
+.text-success {
+  color: green;
+}
+
+.text-error{
+  color: red;
+}
+
+.has-error {
+    color: red;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Module 1 Assignment</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link href="style.css" rel="stylesheet"></script>
+  </head>
+  <body ng-app="ShoppingList" >
+    <h1>Module 2 assignment</h1>
+    <div ng-controller="ShoppingListController1 as buyCtrl">
+      <span>To Buy :</span>
+      <ol>
+        <li ng-repeat = "item in buyCtrl.items">Buy {{ item.quantity }} {{ item.name }}
+          <button type="button" name="Bought" ng-click="buyCtrl.removeItem($index, item.name, item.quantity);">Bought</button>
+        </li>
+
+      </ol>
+    </div>
+
+    <div ng-controller="ShoppingListController2 as boughtCtrl">
+      <span>Already Bought</span>
+      <ol>
+        <li ng-repeat = "item in boughtCtrl.items">Bought {{ item.quantity }} {{ item.name }}
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -7,21 +7,20 @@
     <script type="text/javascript" src="app.js"></script>
     <link href="style.css" rel="stylesheet"></script>
   </head>
-  <body ng-app="lunchCheck" ng-controller="LunchCheckController">
-    <h1>Module 1 assignment</h1>
-    <div>
-      Enter the food items you like to eat for lunch:
-      <input type="text" ng-model="lunchItems" class={{ myClass }}>
-    </div>
-    </div>
-    <div>Check If Too Much :
-      <input type="button" value="Submit" ng-click="displayItems();">
-      </button>
-      <br>
-      <span class={{ myClass }}>
-        {{totalItems}}
-      </span>
+  <body ng-app="shoppingList">
+    <h1>Module 2 assignment</h1>
+    <div ng-controller="shoppingListController">
+      <span>To Buy</span>
+      <ul>
+        <li ng-repeat = "item in shoppingList1">Buy {{item.quantity}} {{item.name}}</li>
+      </ul>
 
     </div>
+
+    <div>
+      <span>Already Bought</span>
+
+    </div>
+
   </body>
 </html>
