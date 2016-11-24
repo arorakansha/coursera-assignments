@@ -1,19 +1,35 @@
 .error {
-  border-color: red;
+ color: red;
 }
 
-.success {
-  border-color: green;
+*{
+  box-sizing: border-box;
+}
+.container{
+  width : 100%;
 }
 
-.text-success {
-  color: green;
+html,body,h1{
+  font-family: sans-serif;
+
 }
 
-.text-error{
-  color: red;
+.content {
+  font-weight: bold;
+  color : blue;
+  margin-left: 20px;
 }
 
-.has-error {
-    color: red;
+.col-lg-4 {
+   float: left;
+   padding: 15px;
+   margin : 5px;
+   width: 48%;
+ }
+
+h1 {
+  text-align: center;
+  color : Green;
+  padding: 15px;
+
 }

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-//TODO : Empty list messages handling is pending
+//TODO Empty list messages handling is pending
   angular.module("ShoppingList",[])
     .controller("ShoppingListController1", ShoppingListController1)
       .controller("ShoppingListController2", ShoppingListController2)
@@ -10,7 +10,6 @@
     ShoppingListController1.$inject = ["ShoppingListService"];
     function ShoppingListController1(ShoppingListService) {
       var buyList = this;
-
       buyList.items = ShoppingListService.getBuyItems();
 
       buyList.removeItem = function (itemIndex, name , quantity){
@@ -19,10 +18,9 @@
       }
     }
 
-    ShoppingListController2.$inject = ["ShoppingListService"];
-    function ShoppingListController2(ShoppingListService) {
+    ShoppingListController2.$inject = ["ShoppingListService","$scope"];
+    function ShoppingListController2(ShoppingListService, $scope) {
       var boughtList = this;
-
       boughtList.items = ShoppingListService.getBoughtItems();
     }
 
